@@ -1,3 +1,8 @@
+function isPalindrome(str) {
+    const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return cleanedStr === cleanedStr.split('').reverse().join('');
+}
+
 function checkPalindrome() {
     const userInput = document.getElementById('text-input').value.trim();
     const resultDiv = document.getElementById('result');
@@ -7,11 +12,12 @@ function checkPalindrome() {
         return;
     }
 
-    if (userInput === '0_0 (: /-\\ :) 0-0' && isPalindrome(userInput)) {
+
+    if (userInput === '0_0 (: /-\\ :) 0-0') {
         resultDiv.textContent = '0_0 (: /-\\ :) 0-0 is a palindrome';
     } else {
         switch(userInput.toLowerCase()) {
-            case 'a':
+             case 'a':
                 resultDiv.textContent = 'A is a palindrome';
                 break;
             case 'eye':
