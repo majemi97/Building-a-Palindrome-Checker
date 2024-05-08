@@ -53,6 +53,7 @@ function checkPalindrome() {
             resultDiv.textContent = 'five|\_/|four is not a palindrome';
             break;
         default:
+            // No need for a separate check, as it will handle all non-specific cases
             if (isPalindrome(userInput)) {
                 resultDiv.textContent = `"${userInput}" is a palindrome!`;
             } else {
